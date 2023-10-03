@@ -3,30 +3,58 @@ body {
     margin: 0;
     padding: 0;
     cursor: default;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
 }
 
 .container {
-    font-family: Helvetica, Arial, sans-serif;
-    padding-top: 24px;
-    padding-left: 36px;
+    height: 100vh;
 }
 
-.whiteline {
+.leftcontainer {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    padding: 24px 36px;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+}
+
+.rightcontainer {
+    padding: 24px;
+    margin-left: 400px;  /* 336 Add a margin equal to the total width of the left container */
+}
+
+
+.verticalcontentstack {
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+.whiteline{
     color: white;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
-.greycontainer {
+.title {
+    color: white;
+    margin-bottom: 24px;
+    margin-top: 88px;  /* Adjust this value to your preference */
+}
+
+.greycontainer,
+.paragraph {
     color: grey;
-    font-family: Helvetica, Arial, sans-serif;
 }
 
 .greylink {
     display: inline-block;
-    color: grey;
-    font-family: Helvetica, Arial, sans-serif;
     padding-top: 1px;
     text-decoration: none;
+    color: grey;
 }
 
 .text {
@@ -43,4 +71,45 @@ body {
     padding-bottom: 24px;
     display: flex;
     flex-direction: column;
+}
+
+.paragraph {
+    padding-bottom: 24px;
+    text-align: justify;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 640px;
+    overflow-x: auto;
+    white-space: nowrap;  /* Prevents wrapping of images, making them stay in a single row */
+    scrollbar-width: thin;  /* Adjusts the width of the scrollbar */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5); /* Adjusts the color of the scrollbar */
+    margin-bottom: 24px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-width: 600px;
+    display: inline-block; /* Puts images in a row */
+}
+
+.carousel-slide {
+    display: flex;
+    width: calc(100% * 3); /* Adjust the multiplier (3 in this case) based on the number of images */
+    transition: all 0.5s ease;
+}
+
+/* For WebKit browsers */
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
 }
