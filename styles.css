@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+    color: grey;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: .85rem;
+    font-weight: 400;
+    line-height: 1.36;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    position: relative;
+}
+
+.verticalcontentstack {
+    max-width: 640px;
+    width: 100%;
+}
+
+.whiteline {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.title {
+    color: white;
+    margin-bottom: 24px;
+}
+
+.greycontainer {
+    max-width: 270px;
+    padding-bottom: 12px;
+    color: grey;
+}
+
+.greylink {
+    display: inline-block;
+    padding-top: 1px;
+    text-decoration: none;
+    color: grey;
+}
+
+.text {
+    color: inherit;
+}
+
+.text:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.lineswrapper {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph {
+    padding-bottom: 18px;
+    text-align: justify;
+    color: grey;
+}
+
+.quote-paragraph {
+    padding-bottom: 24px;
+    text-align: left;
+    color: grey;
+    width: 480px;
+    font-style: italic;
+}
+
+.qp-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.outlink {
+    color: grey;
+}
+
+.outlink:hover {
+    color: white;
+}
+
+/* Standard Desktop Layout */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    padding: 24px 36px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Ensure content starts at top and scrolls naturally */
+.content-container {
+    margin-left: 270px;
+    padding: 24px;
+    max-width: 640px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* Mobile Fix */
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        padding-bottom: 8px;
+        z-index: 10;
+    }
+
+    .content-container {
+        margin-top: 220px;
+        margin-left: 0;
+        width: 90%;
+        padding: 16px;
+
+    }
+}
