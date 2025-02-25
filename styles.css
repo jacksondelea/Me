@@ -142,3 +142,18 @@ body {
 
     }
 }
+
+.video-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;  /* Hides anything that overflows the container */
+}
+
+.video-responsive img {
+    width: 100%;
+
+    object-fit: contain; /* Ensures the whole GIF fits without distortion */
+    max-height: 100%; /* Prevents it from overflowing the container */
+}
