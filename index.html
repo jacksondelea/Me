@@ -9,91 +9,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <style>
-        /* Ensure fog background covers full screen and remains visible on mobile */
-        #fog-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            min-height: 100vh; /* Ensures it covers the whole viewport */
-            z-index: -10; /* Keeps it behind the menu */
-            pointer-events: none; /* Prevents interaction */
-        }
-
-        /* Mobile fix */
-        @media screen and (max-width: 768px) {
-            #fog-background {
-                position: fixed; /* Ensures it stays fixed */
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                z-index: -10; /* Keeps it behind expanded menu */
-            }
-        }
-    </style>
 </head>
 <body>
-
-    <!-- Background Container for Fog Effect -->
-    <div id="fog-background"></div>
-
     <!-- Main Container -->
     <div class="container">
         <!-- LEFT SIDE MENU -->
-        <div class="menu-container">
-            <div class="whiteline">
-                <a href="index.html" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="menu-container-id">
+            <span href="index.html">
                     Jackson Singhakowinta Delea
-                </a>
-                <span style="color:grey"></span>
-            </div>          
-            <div class="greycontainer">
-                <div class="lineswrapper" style="padding-left: 0;">
-                    <a class="greylink" href="bio.html">
-                        <span class="text" style="text-decoration: underline;">Information / Services</span>
-                    </a>
-                    <a class="greylink" href="https://drive.google.com/file/d/1HyrjLLcFAvvXcj1gHaOTWZQRSCRgx-tZ/view?usp=sharing" target="_blank">
-                        <span class="text" style="text-decoration: underline;">CV</span>
-                    </a>
-                    <a class="greylink" href="https://singhakowinta.tumblr.com/" target="_blank">
-                        <span class="text" style="text-decoration: underline;">Blog</span>
-                    </a>
+            </span>     
+            <div class="greycontainer-id">
+                <div>
+                    New York City
                 </div>
+                <a class="outlink" href="https://drive.google.com/file/d/1LuSQkmUhP-gxQt6n4mHXMbmGvG2M6bxZ/view?usp=drive_link" target="_blank">
+                    jacksondelea@proton.me
+                </a>
             </div>
-            <div class="greycontainer">
-                Work:
-                    <div class="lineswrapper">
-                        <a class="greylink" href="screen.html">
-                            <span class="text">Screen→</span>
-                        </a>
-                        <a class="greylink" href="writing.html">
-                            <span class="text">Writing→</span>
-                        </a>
-                        <a class="greylink" href="audio.html">
-                            <span class="text">Audio→</span>
-                        </a>
-                    </div>
+            <div class="greycontainer-id">
+                    <a class="outlink" href="https://drive.google.com/file/d/1LuSQkmUhP-gxQt6n4mHXMbmGvG2M6bxZ/view?usp=drive_link" target="_blank">
+                        CV
+                    </a>
+                    <a class="outlink" href="https://singhakowinta.tumblr.com/" target="_blank">
+                        Blog
+                    </a>
             </div>
         </div>
+        <!-- END OF LEFT SIDE -->
+        <!-- RIGHT SIDE MENU -->
+        <div class="selection-container">
+            <div class="greycontainer">
+                <span>
+                    Selected viewing:
+                </span>
+                <a class="outlink" href="software.html">
+                    Software
+                </a>
+                <a class="outlink" href="writing.html">
+                    Writing
+                </a>
+                <a class="outlink" href="audio.html">
+                    Audio
+                </a>
+            </div>
+        </div>
+        <!-- END OF RIGHT SIDE MENU -->
     </div>
-    <!-- END OF LEFT SIDE -->
 
-    <script>
-        VANTA.FOG({
-            el: "#fog-background",
-            mouseControls: true, /* Keeps it ambient */
-            touchControls: true,
-            gyroControls: true,
-            highlightColor: 0x181818, /* Dark gray for slight visibility */
-            midtoneColor: 0x121212, /* Subtle contrast */
-            lowlightColor: 0x0e0e0e, /* Very dark */
-            baseColor: 0x090909, /* Close to black */
-            blurFactor: 0.45, /* Slight haze */
-            speed: 0.5 /* Subtle movement */
-        });
-    </script>
 
 </body>
 </html>
