@@ -22,10 +22,18 @@ body {
     align-items: center;
     font-weight: bold;
     unicode-bidi: isolate;
+    padding-bottom: .1em;
 }
 .construction-container{
     transform: rotate(-2deg);
-    padding-left: 15px;
+    padding-left: 24px;
+    margin: 10px;
+    display: block;
+}
+
+.little-pic{
+    height: 172px;
+    padding-top: .1em;
 }
 
 .container {
@@ -88,6 +96,7 @@ body {
 .outlink {
     color: inherit;
     text-decoration: underline;
+    padding-bottom: .12em
 }
 
 .outlink-white {
