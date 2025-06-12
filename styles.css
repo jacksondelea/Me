@@ -4,7 +4,7 @@ body {
     padding: 0;
     cursor: default;
     font-family: "Times New Roman", Times, serif;
-    font-size: 32;
+    font-size: 1em;
     text-rendering: optimizeSpeed; /* Less smooth */
     -moz-osx-font-smoothing: grayscale;
     filter: contrast(150%) blur(0.55px);
@@ -13,10 +13,19 @@ body {
         1px 0px #222,
         -1px 0px #222,
         0px 1px #111;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     min-height: 100vh;
+}
+
+.construction-header{
+    display: block;
+    font-size: 2em;
+    align-items: center;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.construction-container{
+    transform: rotate(-2deg);
+    padding-left: 15px;
 }
 
 .container {
@@ -88,7 +97,6 @@ body {
 
 .outlink:hover {
     cursor: pointer;
-    color: black;
 }
 
 .name-logo{
